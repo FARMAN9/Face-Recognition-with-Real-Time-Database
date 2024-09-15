@@ -1,0 +1,17 @@
+import cv2
+
+
+cap = cv2.VideoCapture(0)
+cap.set(3, 1280)
+cap.set(4, 720)
+imgBackground = cv2.imread('Resources/background.jpg')
+
+while True:
+    success, img = cap.read()
+     imgBackground[162:162 + 480, 55:55 + 640] = img
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not broadcast input array from shape (720,1280,3) into shape (480,640,3)
+    imgBackground[162:162 + 480, 55:55 + 640] = img
+    cv2.imshow('web cam', img)
+    cv2.imshow('Face ATT', imgBackground)
+    cv2.waitKey(1)

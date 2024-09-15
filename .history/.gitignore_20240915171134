@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info
+dist/
+build/
+*.log
+
+# Virtual environment directories
+venv/
+env/
+*.egg-info/
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PyCharm specific files
+*.iml
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python environment files
+.env
+.venv
+.env.*
+venv.*
+
+# SQLite database files
+*.sqlite3
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+Makefile
+
