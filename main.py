@@ -45,6 +45,7 @@ print(imgModeList)
 # Load encoding data
 with open('EncodeFile.p', 'rb') as file:
     encodeListKnowIDS = pickle.load(file)
+    file.close()
 encodeListKnown, studentIds = encodeListKnowIDS
 
 print(studentIds)

@@ -11,7 +11,7 @@ build/
 *.log
 
 # Virtual environment directories
-venv/
+venv
 env/
 *.egg-info/
 
