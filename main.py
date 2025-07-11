@@ -16,8 +16,8 @@ import time
 
 # Initialize video capture
 cap = cv2.VideoCapture(0)
-cap.set(3, 1280)  # Width
-cap.set(4, 720)   # Height
+cap.set(3, 640)  # Width
+cap.set(4, 480)   # Height
 
 # Load the background and overlay images
 imgBackground = cv2.imread('Resources/background.jpg')
@@ -63,10 +63,12 @@ while True:
         break
 
     h, w = 250, 250
+
+
     resized_img = cv2.resize(img, (h, w))
 
     # Overlay the resized image onto the background
-    imgBackground[100:100 + h, 10:10 + w] = resized_img
+    imgBackground[162:162  + h, 55:55 + w] = resized_img
 
     if modeType < len(imgModeList):
         modeImg = imgModeList[modeType]
@@ -74,8 +76,8 @@ while True:
                                                     648, 500:500 + 438].shape[:2]
 
         # Resize modeImg to fit the target region
-        resizedImgMode = cv2.resize(modeImg, (438, 648))
-        imgBackground[50:50 + 648, 500:500 + 438] = resizedImgMode
+        resizedImgMode = cv2.resize(modeImg, (target_width, target_height))
+        imgBackground[50:50 + target_height, 500:500 + target_width] = resizedImgMode
 
     imgs = cv2.resize(img, (0, 0), None, 0.25, 0.25)
     # Changed COLOR_RGBA2RGB to COLOR_BGR2RGB
